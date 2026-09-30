@@ -90,6 +90,8 @@ export const ListOverview: React.FC<ListOverviewProps> = ({ service, t, onNew, o
 
 	const columns: IColumn[] = [
 		{ key: "name", name: t("ListName"), fieldName: "name", minWidth: 150, maxWidth: 300, isResizable: true },
+		{ key: "department", name: t("Department"), fieldName: "department", minWidth: 100, maxWidth: 200, isResizable: true },
+		{ key: "process", name: t("Process"), fieldName: "process", minWidth: 100, maxWidth: 200, isResizable: true },
 		{
 			key: "description",
 			name: t("ListDescription"),

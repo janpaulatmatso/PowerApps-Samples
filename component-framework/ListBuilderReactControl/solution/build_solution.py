@@ -101,7 +101,23 @@ TABLES = [
                 "description": "The description of the list",
                 "max_length": 2000,
             },
+            {
+                "type": "nvarchar",
+                "schema": f"{PREFIX}_Afdeling",
+                "display": "Afdeling",
+                "description": "The department that owns the list",
+                "max_length": 200,
+            },
+            {
+                "type": "nvarchar",
+                "schema": f"{PREFIX}_Proces",
+                "display": "Proces",
+                "description": "The process the list belongs to",
+                "max_length": 200,
+            },
         ],
+        # Columns added to the default view "Active Lijsten"
+        "view_columns": [f"{PREFIX}_afdeling", f"{PREFIX}_proces"],
     },
     {
         "schema": f"{PREFIX}_LijstKolom",
@@ -338,6 +354,9 @@ def render_entity(table: dict) -> str:
         name = name.replace("<RequiredLevel>none</RequiredLevel>", "<RequiredLevel>required</RequiredLevel>")
     text = text[:start] + name + text[end:]
 
+    for column in table.get("view_columns", []):
+        text = add_view_column(text, column)
+
     # The forms and views of the template keep their structure but get ids of their own.
     def new_guid(match):
         return match.group(1) + new_id(f"{logical}/{match.group(2).lower()}") + match.group(3)
@@ -349,6 +368,21 @@ def render_entity(table: dict) -> str:
         text,
     )
     return text
+
+
+def add_view_column(text: str, column: str) -> str:
+    """Adds a column to the default public view ("Active ...") of the table."""
+    start = text.index("<isdefault>1</isdefault>")
+    start = text.rindex("<savedquery>", 0, start)
+    end = text.index("</savedquery>", start)
+    view = text[start:end]
+    if "<querytype>0</querytype>" not in view:
+        raise SystemExit("The default view of the template is not a public view")
+    view = view.replace('<cell name="createdon"', f'<cell name="{column}" width="150" />\n                  <cell name="createdon"', 1)
+    view = view.replace('<attribute name="createdon" />', f'<attribute name="{column}" />\n                  <attribute name="createdon" />', 1)
+    if column not in view:
+        raise SystemExit(f"Could not add {column} to the default view")
+    return text[:start] + view + text[end:]
 
 
 def render_relationships() -> str:

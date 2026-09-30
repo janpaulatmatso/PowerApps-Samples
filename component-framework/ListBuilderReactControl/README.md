@@ -12,7 +12,7 @@ description: "This sample shows a React code component that lets users create th
 
 The List Builder component lets users create their own lists without customizing Dataverse:
 
-- **Create a list** with a name and a description.
+- **Create a list** with a name, a description, a department and a process.
 - **Define the columns** of the list and choose a data type for each column: text, multiline text, whole number, decimal number, date, yes/no or choice (with your own options). Columns can be marked as required and reordered.
 - **Enter data** with an input form that is generated from the columns, with validation for each data type.
 - **Upload data** from a CSV file. The CSV headers are linked to the columns automatically, every row is validated and you see a preview with the errors before importing.
@@ -32,7 +32,7 @@ Creating a Dataverse table for every list would require every user to have custo
 
 | Table | Columns | Purpose |
 | --- | --- | --- |
-| `sample_lijst` (Lijst) | `sample_name`, `sample_omschrijving` | A list with its name and description |
+| `sample_lijst` (Lijst) | `sample_name`, `sample_omschrijving`, `sample_afdeling`, `sample_proces` | A list with its name, description, department and process (free text) |
 | `sample_lijstkolom` (Lijstkolom) | `sample_name`, `sample_sleutel`, `sample_datatype`, `sample_opties`, `sample_verplicht`, `sample_volgorde`, `sample_lijstid` | A column of a list and its data type. `sample_opties` holds the options of a choice column as a JSON array. |
 | `sample_lijstregel` (Lijstregel) | `sample_name`, `sample_waarden`, `sample_lijstid` | A data row of a list. `sample_waarden` holds the values as a JSON object, for example `{"titel":"Max Havelaar","pagina_s":352,"gelezen_op":"2023-11-02","uit":false}` |
 

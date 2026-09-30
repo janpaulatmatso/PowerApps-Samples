@@ -28,6 +28,10 @@ export interface ListDefinition {
 	id?: string;
 	name: string;
 	description: string;
+	/** The department that owns the list. Free text for now. */
+	department: string;
+	/** The process the list belongs to. Free text for now. */
+	process: string;
 }
 
 /** A column of a user defined list (a row in sample_lijstkolom). */

@@ -102,6 +102,8 @@ export class InMemoryListService implements IListService {
 			id: listId,
 			name: "Boodschappen",
 			description: "Wat we deze week nog moeten halen",
+			department: "Facilitair",
+			process: "Inkoop",
 		});
 		const columns: ListColumn[] = [
 			{ id: this.newId(), key: "product", name: "Product", type: ColumnType.Text, options: [], required: true, order: 0 },

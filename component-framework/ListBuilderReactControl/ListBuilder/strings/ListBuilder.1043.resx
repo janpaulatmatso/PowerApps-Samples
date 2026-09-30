@@ -375,4 +375,10 @@
   <data name="EditColumnsOnly" xml:space="preserve">
     <value>Kolommen bewerken</value>
   </data>
+  <data name="Department" xml:space="preserve">
+    <value>Afdeling</value>
+  </data>
+  <data name="Process" xml:space="preserve">
+    <value>Proces</value>
+  </data>
 </root>

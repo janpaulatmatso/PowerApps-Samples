@@ -149,8 +149,15 @@ export const ListData: React.FC<ListDataProps> = ({ service, t, locale, listId, 
 	return (
 		<Stack tokens={{ childrenGap: 8 }}>
 			<CommandBar items={commands} />
-			{/* On the form of the list, the form already shows the name and description. */}
+			{/* On the form of the list, the form already shows the name, description, department and process. */}
 			{onBack && <Text variant="xLarge">{list.name}</Text>}
+			{onBack && (list.department || list.process) && (
+				<Text variant="small">
+					{[list.department && `${t("Department")}: ${list.department}`, list.process && `${t("Process")}: ${list.process}`]
+						.filter(Boolean)
+						.join(" · ")}
+				</Text>
+			)}
 			{onBack && list.description && <Text styles={{ root: { whiteSpace: "pre-wrap" } }}>{list.description}</Text>}
 			<ErrorBar message={error} onDismiss={() => setError(undefined)} />
 

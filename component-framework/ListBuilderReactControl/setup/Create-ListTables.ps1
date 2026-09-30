@@ -222,6 +222,18 @@ Invoke-DataverseCommands {
          -description 'The description of the list' `
          -maxLength 2000)
 
+   $departmentColumn = New-ColumnDefinition -type 'StringAttributeMetadata' -schemaName "$($prefix)_Afdeling" `
+      -displayName 'Afdeling' -description 'The department that owns the list'
+   $departmentColumn.MaxLength = 200
+   $departmentColumn.FormatName = @{ Value = 'Text' }
+   Add-Column -tableLogicalName "$($prefix)_lijst" -column $departmentColumn
+
+   $processColumn = New-ColumnDefinition -type 'StringAttributeMetadata' -schemaName "$($prefix)_Proces" `
+      -displayName 'Proces' -description 'The process the list belongs to'
+   $processColumn.MaxLength = 200
+   $processColumn.FormatName = @{ Value = 'Text' }
+   Add-Column -tableLogicalName "$($prefix)_lijst" -column $processColumn
+
    #endregion sample_lijst
 
    #region sample_lijstkolom
