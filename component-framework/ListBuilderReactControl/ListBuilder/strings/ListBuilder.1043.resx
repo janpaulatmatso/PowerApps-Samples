@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ListBuilder_Name" xml:space="preserve">
+    <value>Lijstjesmaker</value>
+  </data>
+  <data name="ListBuilder_Desc" xml:space="preserve">
+    <value>Laat gebruikers zelf lijsten maken met kolommen en datatypes, en gegevens invoeren via een formulier of een CSV-bestand.</value>
+  </data>
+  <data name="Anchor_Name" xml:space="preserve">
+    <value>Anker</value>
+  </data>
+  <data name="Anchor_Desc" xml:space="preserve">
+    <value>Een willekeurige tekstkolom. De control gebruikt de waarde niet; deze is alleen nodig om de control op een formulier te plaatsen.</value>
+  </data>
+  <data name="DataSource_Name" xml:space="preserve">
+    <value>Gegevensbron</value>
+  </data>
+  <data name="DataSource_Desc" xml:space="preserve">
+    <value>Dataverse slaat de lijsten op in de sample_lijst-tabellen. Demo houdt voorbeeldgegevens in het geheugen, bijvoorbeeld in de testomgeving.</value>
+  </data>
+  <data name="DataSource_Dataverse" xml:space="preserve">
+    <value>Dataverse</value>
+  </data>
+  <data name="DataSource_Demo" xml:space="preserve">
+    <value>Demo (in geheugen)</value>
+  </data>
+  <data name="Type_Text" xml:space="preserve">
+    <value>Tekst</value>
+  </data>
+  <data name="Type_MultilineText" xml:space="preserve">
+    <value>Meerregelige tekst</value>
+  </data>
+  <data name="Type_WholeNumber" xml:space="preserve">
+    <value>Geheel getal</value>
+  </data>
+  <data name="Type_Decimal" xml:space="preserve">
+    <value>Decimaal getal</value>
+  </data>
+  <data name="Type_Date" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="Type_YesNo" xml:space="preserve">
+    <value>Ja/Nee</value>
+  </data>
+  <data name="Type_Choice" xml:space="preserve">
+    <value>Keuzelijst</value>
+  </data>
+  <data name="AddColumn" xml:space="preserve">
+    <value>Kolom toevoegen</value>
+  </data>
+  <data name="BackToLists" xml:space="preserve">
+    <value>Terug naar lijsten</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuleren</value>
+  </data>
+  <data name="ChoiceOptions" xml:space="preserve">
+    <value>Opties</value>
+  </data>
+  <data name="ChoiceOptionsHelp" xml:space="preserve">
+    <value>Eén optie per regel.</value>
+  </data>
+  <data name="ChooseFile" xml:space="preserve">
+    <value>CSV-bestand kiezen</value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>Kolomnaam</value>
+  </data>
+  <data name="Columns" xml:space="preserve">
+    <value>Kolommen</value>
+  </data>
+  <data name="CsvEmpty" xml:space="preserve">
+    <value>Het bestand moet een kopregel en minstens één gegevensregel bevatten.</value>
+  </data>
+  <data name="CsvHelp" xml:space="preserve">
+    <value>Upload een CSV-bestand (UTF-8, gescheiden door ; of ,) met een kopregel. Koppen die overeenkomen met een kolomnaam worden automatisch gekoppeld.</value>
+  </data>
+  <data name="CsvImport" xml:space="preserve">
+    <value>CSV importeren</value>
+  </data>
+  <data name="CsvReadError" xml:space="preserve">
+    <value>Het bestand kon niet worden gelezen.</value>
+  </data>
+  <data name="DataType" xml:space="preserve">
+    <value>Datatype</value>
+  </data>
+  <data name="DatePlaceholder" xml:space="preserve">
+    <value>dd-mm-jjjj</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Verwijderen</value>
+  </data>
+  <data name="DeleteListText" xml:space="preserve">
+    <value>De lijst '{0}' en alle gegevens erin worden definitief verwijderd.</value>
+  </data>
+  <data name="DeleteListTitle" xml:space="preserve">
+    <value>Lijst verwijderen?</value>
+  </data>
+  <data name="DeleteRowText" xml:space="preserve">
+    <value>De geselecteerde regel wordt definitief verwijderd.</value>
+  </data>
+  <data name="DeleteRowTitle" xml:space="preserve">
+    <value>Regel verwijderen?</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
+  <data name="EditColumns" xml:space="preserve">
+    <value>Lijst en kolommen bewerken</value>
+  </data>
+  <data name="EditList" xml:space="preserve">
+    <value>Lijst bewerken</value>
+  </data>
+  <data name="EditRow" xml:space="preserve">
+    <value>Regel bewerken</value>
+  </data>
+  <data name="Error_Choice" xml:space="preserve">
+    <value>Kies een van de opties van deze kolom.</value>
+  </data>
+  <data name="Error_Date" xml:space="preserve">
+    <value>Voer een geldige datum in (dd-mm-jjjj).</value>
+  </data>
+  <data name="Error_Decimal" xml:space="preserve">
+    <value>Voer een getal in.</value>
+  </data>
+  <data name="Error_DuplicateColumn" xml:space="preserve">
+    <value>Een andere kolom heeft dezelfde naam.</value>
+  </data>
+  <data name="Error_NoColumns" xml:space="preserve">
+    <value>Voeg minstens één kolom toe.</value>
+  </data>
+  <data name="Error_NoOptions" xml:space="preserve">
+    <value>Voer minstens één optie in.</value>
+  </data>
+  <data name="Error_Required" xml:space="preserve">
+    <value>Een waarde is verplicht.</value>
+  </data>
+  <data name="Error_WholeNumber" xml:space="preserve">
+    <value>Voer een geheel getal in.</value>
+  </data>
+  <data name="Error_YesNo" xml:space="preserve">
+    <value>Voer ja of nee in.</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>Fouten</value>
+  </data>
+  <data name="HasRowsInfo" xml:space="preserve">
+    <value>Deze lijst bevat al gegevens. Het datatype van bestaande kolommen kan niet meer worden gewijzigd. Als je een kolom verwijdert, worden de gegevens ervan verborgen.</value>
+  </data>
+  <data name="ImportDone" xml:space="preserve">
+    <value>{0} regels geïmporteerd. {1} regels met fouten zijn overgeslagen.</value>
+  </data>
+  <data name="ImportFailed" xml:space="preserve">
+    <value>De import is gestopt na {0} regels: {1}</value>
+  </data>
+  <data name="ImportRows" xml:space="preserve">
+    <value>{0} regels importeren</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Bezig met importeren...</value>
+  </data>
+  <data name="InputForm" xml:space="preserve">
+    <value>Invoerformulier</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Regel</value>
+  </data>
+  <data name="ListDescription" xml:space="preserve">
+    <value>Omschrijving</value>
+  </data>
+  <data name="ListName" xml:space="preserve">
+    <value>Naam</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Laden...</value>
+  </data>
+  <data name="MapColumns" xml:space="preserve">
+    <value>Koppel de CSV-kolommen aan de kolommen van de lijst</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Omlaag</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Omhoog</value>
+  </data>
+  <data name="MyLists" xml:space="preserve">
+    <value>Mijn lijstjes</value>
+  </data>
+  <data name="NewList" xml:space="preserve">
+    <value>Nieuwe lijst</value>
+  </data>
+  <data name="NewRow" xml:space="preserve">
+    <value>Nieuwe regel</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nee</value>
+  </data>
+  <data name="NoColumns" xml:space="preserve">
+    <value>Deze lijst heeft nog geen kolommen. Voeg ze toe via 'Lijst en kolommen bewerken'.</value>
+  </data>
+  <data name="NoLists" xml:space="preserve">
+    <value>Er zijn nog geen lijsten. Kies 'Nieuwe lijst' om er een te maken.</value>
+  </data>
+  <data name="NoRows" xml:space="preserve">
+    <value>Deze lijst bevat nog geen gegevens.</value>
+  </data>
+  <data name="NoValue" xml:space="preserve">
+    <value>(leeg)</value>
+  </data>
+  <data name="NotImported" xml:space="preserve">
+    <value>(niet importeren)</value>
+  </data>
+  <data name="OpenList" xml:space="preserve">
+    <value>Openen</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Voorbeeld (eerste {0} van {1} regels)</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Vernieuwen</value>
+  </data>
+  <data name="RemoveColumn" xml:space="preserve">
+    <value>Kolom verwijderen</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Verplicht</value>
+  </data>
+  <data name="RowSaved" xml:space="preserve">
+    <value>De regel is opgeslagen. Je kunt de volgende regel invoeren.</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Gegevens</value>
+  </data>
+  <data name="RowsInFile" xml:space="preserve">
+    <value>{0}: {1} regels</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Opslaan</value>
+  </data>
+  <data name="Saving" xml:space="preserve">
+    <value>Opslaan...</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>Kies een optie</value>
+  </data>
+  <data name="SkipInvalid" xml:space="preserve">
+    <value>Regels met fouten overslaan</value>
+  </data>
+  <data name="ValidationSummary" xml:space="preserve">
+    <value>{0} regels zijn geldig, {1} regels bevatten fouten.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+</root>
