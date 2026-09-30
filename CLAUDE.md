@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository Overview
 
 This repository contains sample code for Power Apps across multiple technology stacks:
-- **component-framework/**: Power Apps Component Framework (PCF) controls (~29 TypeScript/React controls)
+- **component-framework/**: Power Apps Component Framework (PCF) controls (~30 TypeScript/React controls)
 - **dataverse/**: Dataverse SDK samples (C#, .NET Core, Web API, Plugins)
 - **ai-builder/**: AI Builder sample data and model packages
 - **model-driven-apps/**: Model-driven app samples
@@ -205,7 +205,7 @@ Legacy samples each have isolated `.sln` files with:
 
 ### Component Framework Categories
 - **Standard Controls**: IncrementControl, LinearInputControl
-- **React Controls**: ChoicesPickerReactControl, FacepileReactControl
+- **React Controls**: ChoicesPickerReactControl, FacepileReactControl, ListBuilderReactControl (user defined lists on a generic Dataverse data model)
 - **Dataset Controls**: DataSetGrid, ModelDrivenGridControl (for grid/table data)
 - **API Demonstrations**: DeviceApiControl, FormattingAPIControl, NavigationAPIControl
 - **Advanced**: AngularJSFlipControl, PowerAppsGridCustomizerControl

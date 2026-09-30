@@ -1,0 +1,20 @@
+        <forms type="main">
+          <systemform>
+            <formid>{{FORM_ID}}</formid>
+            <IntroducedVersion>1.0.0.0</IntroducedVersion>
+            <FormPresentation>1</FormPresentation>
+            <FormActivationState>1</FormActivationState>
+            <form>
+              <tabs>
+{{TABS}}              </tabs>
+{{CONTROL_DESCRIPTIONS}}            </form>
+            <IsCustomizable>1</IsCustomizable>
+            <CanBeDeleted>1</CanBeDeleted>
+            <LocalizedNames>
+              <LocalizedName description="{{FORM_NAME}}" languagecode="1033" />
+            </LocalizedNames>
+            <Descriptions>
+              <Description description="{{FORM_DESCRIPTION}}" languagecode="1033" />
+            </Descriptions>
+          </systemform>
+        </forms>

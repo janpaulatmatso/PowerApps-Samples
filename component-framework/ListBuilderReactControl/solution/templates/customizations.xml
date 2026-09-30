@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.25063.198" OrganizationSchemaType="Full" CRMServerServiceabilityVersion="9.2.25063.00198">
+  <Entities>
+{{ENTITIES}}  </Entities>
+  <Roles>
+{{ROLES}}  </Roles>
+  <Workflows />
+  <FieldSecurityProfiles />
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships>
+{{RELATIONSHIPS}}  </EntityRelationships>
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls>
+    <CustomControl>
+      <Name>{{CONTROL_NAME}}</Name>
+      <FileName>/Controls/{{CONTROL_NAME}}/ControlManifest.xml</FileName>
+    </CustomControl>
+  </CustomControls>
+  <AppModuleSiteMaps>
+{{SITEMAPS}}  </AppModuleSiteMaps>
+  <AppModules>
+{{APPMODULES}}  </AppModules>
+  <EntityDataProviders />
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

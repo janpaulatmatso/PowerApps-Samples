@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Microsoft ResX Schema
+
+    Version 2.0
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
+    associated with the data types.
+
+    Example:
+
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+
+    There are any number of "resheader" rows that contain simple
+    name/value pairs.
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
+    mimetype set.
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
+    extensible. For a given mimetype the value must be set accordingly:
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
+    read any of the formats listed below.
+
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ListBuilder_Name" xml:space="preserve">
+    <value>List Builder</value>
+  </data>
+  <data name="ListBuilder_Desc" xml:space="preserve">
+    <value>Lets users create their own lists with columns and data types, and enter data with a form or a CSV file.</value>
+  </data>
+  <data name="Anchor_Name" xml:space="preserve">
+    <value>Anchor</value>
+  </data>
+  <data name="Anchor_Desc" xml:space="preserve">
+    <value>Any text column. The control doesn't use its value; it is only needed to place the control on a form.</value>
+  </data>
+  <data name="DataSource_Name" xml:space="preserve">
+    <value>Data source</value>
+  </data>
+  <data name="DataSource_Desc" xml:space="preserve">
+    <value>Dataverse stores the lists in the sample_lijst tables. Demo keeps sample data in memory, for example in the test harness.</value>
+  </data>
+  <data name="DataSource_Dataverse" xml:space="preserve">
+    <value>Dataverse</value>
+  </data>
+  <data name="DataSource_Demo" xml:space="preserve">
+    <value>Demo (in memory)</value>
+  </data>
+  <data name="Type_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="Type_MultilineText" xml:space="preserve">
+    <value>Multiline text</value>
+  </data>
+  <data name="Type_WholeNumber" xml:space="preserve">
+    <value>Whole number</value>
+  </data>
+  <data name="Type_Decimal" xml:space="preserve">
+    <value>Decimal number</value>
+  </data>
+  <data name="Type_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Type_YesNo" xml:space="preserve">
+    <value>Yes/No</value>
+  </data>
+  <data name="Type_Choice" xml:space="preserve">
+    <value>Choice</value>
+  </data>
+  <data name="AddColumn" xml:space="preserve">
+    <value>Add column</value>
+  </data>
+  <data name="BackToLists" xml:space="preserve">
+    <value>Back to lists</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ChoiceOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="ChoiceOptionsHelp" xml:space="preserve">
+    <value>One option per line.</value>
+  </data>
+  <data name="ChooseFile" xml:space="preserve">
+    <value>Choose CSV file</value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>Column name</value>
+  </data>
+  <data name="Columns" xml:space="preserve">
+    <value>Columns</value>
+  </data>
+  <data name="CsvEmpty" xml:space="preserve">
+    <value>The file must contain a header row and at least one data row.</value>
+  </data>
+  <data name="CsvHelp" xml:space="preserve">
+    <value>Upload a CSV file (UTF-8, separated by ; or ,) with a header row. Headers that match a column name are linked automatically.</value>
+  </data>
+  <data name="CsvImport" xml:space="preserve">
+    <value>Import CSV</value>
+  </data>
+  <data name="CsvReadError" xml:space="preserve">
+    <value>The file could not be read.</value>
+  </data>
+  <data name="DataType" xml:space="preserve">
+    <value>Data type</value>
+  </data>
+  <data name="DatePlaceholder" xml:space="preserve">
+    <value>dd-mm-yyyy</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteListText" xml:space="preserve">
+    <value>The list '{0}' and all its data will be deleted permanently.</value>
+  </data>
+  <data name="DeleteListTitle" xml:space="preserve">
+    <value>Delete list?</value>
+  </data>
+  <data name="DeleteRowText" xml:space="preserve">
+    <value>The selected row will be deleted permanently.</value>
+  </data>
+  <data name="DeleteRowTitle" xml:space="preserve">
+    <value>Delete row?</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditColumns" xml:space="preserve">
+    <value>Edit list and columns</value>
+  </data>
+  <data name="EditList" xml:space="preserve">
+    <value>Edit list</value>
+  </data>
+  <data name="EditRow" xml:space="preserve">
+    <value>Edit row</value>
+  </data>
+  <data name="Error_Choice" xml:space="preserve">
+    <value>Choose one of the options of this column.</value>
+  </data>
+  <data name="Error_Date" xml:space="preserve">
+    <value>Enter a valid date (dd-mm-yyyy).</value>
+  </data>
+  <data name="Error_Decimal" xml:space="preserve">
+    <value>Enter a number.</value>
+  </data>
+  <data name="Error_DuplicateColumn" xml:space="preserve">
+    <value>Another column has the same name.</value>
+  </data>
+  <data name="Error_NoColumns" xml:space="preserve">
+    <value>Add at least one column.</value>
+  </data>
+  <data name="Error_NoOptions" xml:space="preserve">
+    <value>Enter at least one option.</value>
+  </data>
+  <data name="Error_Required" xml:space="preserve">
+    <value>A value is required.</value>
+  </data>
+  <data name="Error_WholeNumber" xml:space="preserve">
+    <value>Enter a whole number.</value>
+  </data>
+  <data name="Error_YesNo" xml:space="preserve">
+    <value>Enter yes or no.</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="HasRowsInfo" xml:space="preserve">
+    <value>This list already contains data. The data type of existing columns can no longer be changed. Removing a column hides its data.</value>
+  </data>
+  <data name="ImportDone" xml:space="preserve">
+    <value>{0} rows imported. {1} rows with errors were skipped.</value>
+  </data>
+  <data name="ImportFailed" xml:space="preserve">
+    <value>The import stopped after {0} rows: {1}</value>
+  </data>
+  <data name="ImportRows" xml:space="preserve">
+    <value>Import {0} rows</value>
+  </data>
+  <data name="Importing" xml:space="preserve">
+    <value>Importing...</value>
+  </data>
+  <data name="InputForm" xml:space="preserve">
+    <value>Input form</value>
+  </data>
+  <data name="Line" xml:space="preserve">
+    <value>Line</value>
+  </data>
+  <data name="ListDescription" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="ListName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="MapColumns" xml:space="preserve">
+    <value>Link the CSV columns to the list columns</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>Move down</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>Move up</value>
+  </data>
+  <data name="MyLists" xml:space="preserve">
+    <value>My lists</value>
+  </data>
+  <data name="NewList" xml:space="preserve">
+    <value>New list</value>
+  </data>
+  <data name="NewRow" xml:space="preserve">
+    <value>New row</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoColumns" xml:space="preserve">
+    <value>This list has no columns yet. Use 'Edit list and columns' to add them.</value>
+  </data>
+  <data name="NoLists" xml:space="preserve">
+    <value>There are no lists yet. Select 'New list' to create one.</value>
+  </data>
+  <data name="NoRows" xml:space="preserve">
+    <value>This list doesn't contain any data yet.</value>
+  </data>
+  <data name="NoValue" xml:space="preserve">
+    <value>(empty)</value>
+  </data>
+  <data name="NotImported" xml:space="preserve">
+    <value>(don't import)</value>
+  </data>
+  <data name="OpenList" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview (first {0} of {1} rows)</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="RemoveColumn" xml:space="preserve">
+    <value>Remove column</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="RowSaved" xml:space="preserve">
+    <value>The row has been saved. You can enter the next row.</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="RowsInFile" xml:space="preserve">
+    <value>{0}: {1} rows</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Saving" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>Select an option</value>
+  </data>
+  <data name="SkipInvalid" xml:space="preserve">
+    <value>Skip rows with errors</value>
+  </data>
+  <data name="ValidationSummary" xml:space="preserve">
+    <value>{0} rows are valid, {1} rows contain errors.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="SaveListFirst" xml:space="preserve">
+    <value>Save the list first. Then you can add columns and data here.</value>
+  </data>
+  <data name="EditColumnsOnly" xml:space="preserve">
+    <value>Edit columns</value>
+  </data>
+</root>

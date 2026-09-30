@@ -1,0 +1,8 @@
+                            <row>
+                              <cell id="{{CELL_ID}}" showlabel="{{SHOW_LABEL}}"{{ROWSPAN}}>
+                                <labels>
+                                  <label description="{{LABEL}}" languagecode="1033" />
+                                </labels>
+                                <control id="{{CONTROL_ID}}" classid="{{CLASS_ID}}" datafieldname="{{FIELD}}" disabled="false"{{UNIQUE_ID}} />
+                              </cell>
+                            </row>

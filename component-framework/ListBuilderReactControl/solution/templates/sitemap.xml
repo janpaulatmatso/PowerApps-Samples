@@ -1,0 +1,23 @@
+    <AppModuleSiteMap>
+      <SiteMapUniqueName>{{APP_NAME}}</SiteMapUniqueName>
+      <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+      <ShowHome>True</ShowHome>
+      <ShowPinned>True</ShowPinned>
+      <ShowRecents>True</ShowRecents>
+      <SiteMap IntroducedVersion="7.0.0.0">
+        <Area Id="area_lijstjes" ShowGroups="true" IntroducedVersion="7.0.0.0">
+          <Titles>
+            <Title LCID="1033" Title="{{APP_DISPLAY}}" />
+          </Titles>
+          <Group Id="group_lijstjes" IntroducedVersion="7.0.0.0" IsProfile="false">
+            <Titles>
+              <Title LCID="1033" Title="{{APP_DISPLAY}}" />
+            </Titles>
+            <SubArea Id="subarea_lijsten" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="{{ENTITY_LOGICAL}}" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+          </Group>
+        </Area>
+      </SiteMap>
+      <LocalizedNames>
+        <LocalizedName description="{{APP_DISPLAY}}" languagecode="1033" />
+      </LocalizedNames>
+    </AppModuleSiteMap>

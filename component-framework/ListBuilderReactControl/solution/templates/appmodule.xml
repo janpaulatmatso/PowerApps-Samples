@@ -1,0 +1,28 @@
+    <AppModule>
+      <UniqueName>{{APP_NAME}}</UniqueName>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+      <OptimizedFor></OptimizedFor>
+      <statecode>0</statecode>
+      <statuscode>1</statuscode>
+      <FormFactor>1</FormFactor>
+      <ClientType>4</ClientType>
+      <NavigationType>0</NavigationType>
+      <AppModuleComponents>
+{{APP_COMPONENTS}}      </AppModuleComponents>
+      <AppModuleRoleMaps>
+        <Role id="{{ROLE_ID}}" />
+      </AppModuleRoleMaps>
+      <LocalizedNames>
+        <LocalizedName description="{{APP_DISPLAY}}" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="{{APP_DESCRIPTION}}" languagecode="1033" />
+      </Descriptions>
+      <appsettings>
+        <appsetting settingdefinitionid.uniquename="AppChannel">
+          <iscustomizable>1</iscustomizable>
+          <value>1</value>
+        </appsetting>
+      </appsettings>
+    </AppModule>

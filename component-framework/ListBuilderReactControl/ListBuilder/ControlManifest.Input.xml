@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="SampleNamespace" constructor="ListBuilder" version="1.0.0" display-name-key="ListBuilder_Name" description-key="ListBuilder_Desc" control-type="virtual">
+    <external-service-usage enabled="false">
+    </external-service-usage>
+    <!-- The control doesn't use the value of this column. It is only needed to place the control on a form. -->
+    <property name="anchor" display-name-key="Anchor_Name" description-key="Anchor_Desc" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="dataSource" display-name-key="DataSource_Name" description-key="DataSource_Desc" of-type="Enum" usage="input" default-value="Dataverse" required="true">
+      <value name="Dataverse" display-name-key="DataSource_Dataverse">Dataverse</value>
+      <value name="Demo" display-name-key="DataSource_Demo">Demo</value>
+    </property>
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <platform-library name="Fluent" version="8.121.1" />
+      <resx path="strings/ListBuilder.1033.resx" version="1.0.0" />
+      <resx path="strings/ListBuilder.1043.resx" version="1.0.0" />
+    </resources>
+    <feature-usage>
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>

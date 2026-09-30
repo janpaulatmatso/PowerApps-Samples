@@ -1,0 +1,34 @@
+    <EntityRelationship Name="{{NAME}}">
+      <EntityRelationshipType>OneToMany</EntityRelationshipType>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>1.0.0.0</IntroducedVersion>
+      <IsHierarchical>0</IsHierarchical>
+      <ReferencingEntityName>{{REFERENCING_SCHEMA}}</ReferencingEntityName>
+      <ReferencedEntityName>{{REFERENCED_SCHEMA}}</ReferencedEntityName>
+      <CascadeAssign>Cascade</CascadeAssign>
+      <CascadeDelete>Cascade</CascadeDelete>
+      <CascadeReparent>Cascade</CascadeReparent>
+      <CascadeShare>Cascade</CascadeShare>
+      <CascadeUnshare>Cascade</CascadeUnshare>
+      <CascadeRollupView>NoCascade</CascadeRollupView>
+      <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+      <ReferencingAttributeName>{{LOOKUP_SCHEMA}}</ReferencingAttributeName>
+      <RelationshipDescription>
+        <Descriptions>
+          <Description description="" languagecode="1033" />
+        </Descriptions>
+      </RelationshipDescription>
+      <EntityRelationshipRoles>
+        <EntityRelationshipRole>
+          <NavPaneDisplayOption>UseCollectionName</NavPaneDisplayOption>
+          <NavPaneArea>Details</NavPaneArea>
+          <NavPaneOrder>10000</NavPaneOrder>
+          <NavigationPropertyName>{{LOOKUP_SCHEMA}}</NavigationPropertyName>
+          <RelationshipRoleType>1</RelationshipRoleType>
+        </EntityRelationshipRole>
+        <EntityRelationshipRole>
+          <NavigationPropertyName>{{NAME}}</NavigationPropertyName>
+          <RelationshipRoleType>0</RelationshipRoleType>
+        </EntityRelationshipRole>
+      </EntityRelationshipRoles>
+    </EntityRelationship>

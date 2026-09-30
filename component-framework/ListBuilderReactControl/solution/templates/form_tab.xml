@@ -1,0 +1,18 @@
+                <tab verticallayout="true" id="{{TAB_ID}}" name="{{TAB_NAME}}" IsUserDefined="1" expanded="true" showlabel="true">
+                  <labels>
+                    <label description="{{TAB_LABEL}}" languagecode="1033" />
+                  </labels>
+                  <columns>
+                    <column width="100%">
+                      <sections>
+                        <section name="{{SECTION_NAME}}" showlabel="false" showbar="false" IsUserDefined="0" id="{{SECTION_ID}}">
+                          <labels>
+                            <label description="{{TAB_LABEL}}" languagecode="1033" />
+                          </labels>
+                          <rows>
+{{ROWS}}                          </rows>
+                        </section>
+                      </sections>
+                    </column>
+                  </columns>
+                </tab>

@@ -1,0 +1,7 @@
+    <Role id="{{ROLE_ID}}" name="{{ROLE_NAME}}">
+      <IsCustomizable>1</IsCustomizable>
+      <IsAutoAssigned>0</IsAutoAssigned>
+      <Description>{{ROLE_DESCRIPTION}}</Description>
+      <RolePrivileges>
+{{PRIVILEGES}}      </RolePrivileges>
+    </Role>
