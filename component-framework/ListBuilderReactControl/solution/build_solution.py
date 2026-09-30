@@ -217,9 +217,11 @@ def render_column(table: dict, column: dict) -> str:
         "DISPLAY": attr(column["display"]),
         "DESCRIPTION": attr(column["description"]),
     }
-    if kind in ("nvarchar", "ntext"):
+    if kind == "nvarchar":
         values["MAX_LENGTH"] = column["max_length"]
         values["LENGTH"] = column["max_length"] * 2
+    elif kind == "ntext":
+        values["MAX_LENGTH"] = column["max_length"]
     elif kind == "int":
         values["MIN_VALUE"] = column["min_value"]
         values["MAX_VALUE"] = column["max_value"]
@@ -404,6 +406,7 @@ def render_app() -> tuple:
         APP_NAME=APP_NAME,
         APP_DISPLAY=attr(APP_DISPLAY),
         ENTITY_LOGICAL=LIST_TABLE["schema"].lower(),
+        SUBAREA_TITLE=attr(LIST_TABLE["plural"]),
     )
     return app, sitemap
 
