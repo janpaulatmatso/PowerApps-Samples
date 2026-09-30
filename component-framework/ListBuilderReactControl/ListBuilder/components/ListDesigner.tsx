@@ -38,9 +38,9 @@ interface DraftColumn extends ListColumn {
 let uiKeyCounter = 0;
 const newUiKey = () => `c${++uiKeyCounter}`;
 
-/** Lets the user set the name and description of a list and define its columns and their data types. */
+/** Lets the user set the name, description, department and process of a list and define its columns and their data types. */
 export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, embedded, onSaved, onCancel }) => {
-	const [list, setList] = React.useState<ListDefinition>({ name: "", description: "" });
+	const [list, setList] = React.useState<ListDefinition>({ name: "", description: "", department: "", process: "" });
 	const [columns, setColumns] = React.useState<DraftColumn[]>();
 	const [hasRows, setHasRows] = React.useState(false);
 	const [saving, setSaving] = React.useState(false);
@@ -133,7 +133,11 @@ export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, 
 
 		setSaving(true);
 		service
-			.saveList({ ...list, name: list.name.trim() }, result, embedded)
+			.saveList(
+				{ ...list, name: list.name.trim(), department: list.department.trim(), process: list.process.trim() },
+				result,
+				embedded
+			)
 			.then(onSaved)
 			.catch((e) => {
 				setSaving(false);
@@ -155,6 +159,22 @@ export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, 
 						errorMessage={nameError}
 						onChange={(_, v) => setList({ ...list, name: v ?? "" })}
 					/>
+					<Stack horizontal wrap tokens={{ childrenGap: 12 }}>
+						<TextField
+							label={t("Department")}
+							maxLength={200}
+							value={list.department}
+							onChange={(_, v) => setList({ ...list, department: v ?? "" })}
+							styles={{ root: { minWidth: 250, flexGrow: 1 } }}
+						/>
+						<TextField
+							label={t("Process")}
+							maxLength={200}
+							value={list.process}
+							onChange={(_, v) => setList({ ...list, process: v ?? "" })}
+							styles={{ root: { minWidth: 250, flexGrow: 1 } }}
+						/>
+					</Stack>
 					<TextField
 						label={t("ListDescription")}
 						multiline

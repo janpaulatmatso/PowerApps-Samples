@@ -13,7 +13,11 @@
             <Titles>
               <Title LCID="1033" Title="{{APP_DISPLAY}}" />
             </Titles>
-            <SubArea Id="subarea_lijsten" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="{{ENTITY_LOGICAL}}" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" />
+            <SubArea Id="subarea_lijsten" Icon="/_imgs/imagestrips/transparent_spacer.gif" Entity="{{ENTITY_LOGICAL}}" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA">
+              <Titles>
+                <Title LCID="1033" Title="{{SUBAREA_TITLE}}" />
+              </Titles>
+            </SubArea>
           </Group>
         </Area>
       </SiteMap>

@@ -19,7 +19,7 @@ export class DataverseListService implements IListService {
 	public async getLists(): Promise<ListDefinition[]> {
 		const entities = await this.retrieveAll(
 			LIST_TABLE,
-			"?$select=sample_lijstid,sample_name,sample_omschrijving&$orderby=sample_name"
+			"?$select=sample_lijstid,sample_name,sample_omschrijving,sample_afdeling,sample_proces&$orderby=sample_name"
 		);
 		return entities.map(toList);
 	}
@@ -28,7 +28,7 @@ export class DataverseListService implements IListService {
 		const entity = await this.webAPI.retrieveRecord(
 			LIST_TABLE,
 			checkId(listId),
-			"?$select=sample_lijstid,sample_name,sample_omschrijving"
+			"?$select=sample_lijstid,sample_name,sample_omschrijving,sample_afdeling,sample_proces"
 		);
 		return toList(entity);
 	}
@@ -37,6 +37,8 @@ export class DataverseListService implements IListService {
 		const data: ComponentFramework.WebApi.Entity = {
 			sample_name: list.name,
 			sample_omschrijving: list.description,
+			sample_afdeling: list.department,
+			sample_proces: list.process,
 		};
 
 		let listId: string;
@@ -141,6 +143,8 @@ function toList(e: ComponentFramework.WebApi.Entity): ListDefinition {
 		id: e.sample_lijstid as string,
 		name: e.sample_name as string,
 		description: (e.sample_omschrijving as string | null) ?? "",
+		department: (e.sample_afdeling as string | null) ?? "",
+		process: (e.sample_proces as string | null) ?? "",
 	};
 }
 

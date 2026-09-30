@@ -28,9 +28,8 @@
               <IsFilterable>0</IsFilterable>
               <IsRetrievable>0</IsRetrievable>
               <IsLocalizable>0</IsLocalizable>
-              <Format>TextArea</Format>
+              <Format>text</Format>
               <MaxLength>{{MAX_LENGTH}}</MaxLength>
-              <Length>{{LENGTH}}</Length>
               <displaynames>
                 <displayname description="{{DISPLAY}}" languagecode="1033" />
               </displaynames>
