@@ -54,7 +54,8 @@ Values are stored as JSON numbers, booleans and strings. Dates are stored as `yy
 | `ListBuilder/services/InMemoryListService.ts` | Keeps demo data in memory, for the test harness |
 | `ListBuilder/utils/values.ts` | Parsing, validation and formatting of values per data type |
 | `ListBuilder/utils/csv.ts` | CSV parser |
-| `setup/Create-ListTables.ps1` | Creates the three tables in your environment |
+| `setup/Create-ListTables.ps1` | Creates the three tables in your environment (alternative to the solution) |
+| `solution/build_solution.py` | Builds the importable solution zip from `solution/templates` |
 
 ## Compatibility
 
@@ -83,6 +84,26 @@ This sample was created by the community.
 
 ## Try this sample
 
+### Fastest way: import the solution
+
+[solution/ListBuilderSolution_1_0_0_0.zip](solution/ListBuilderSolution_1_0_0_0.zip) contains everything in one unmanaged solution: the three tables, the code component, a model-driven app **Lijstjes** and a security role **Lijstjes gebruiker**.
+
+1. Go to [make.powerapps.com](https://make.powerapps.com), select your environment and choose **Solutions** > **Import solution**. Select the zip and import it.
+1. Give the users the security role **Lijstjes gebruiker** in addition to **Basic User**. With this role every user manages their own lists.
+1. Open the app **Lijstjes**. Select **+ New** to create a list, save it, and open the tab **Kolommen en gegevens** to define the columns and enter or upload data.
+
+The solution uses the publisher `examplepublisher` with the prefix `sample`, like the other samples. Don't also run `setup/Create-ListTables.ps1` in the same environment; both create the same tables.
+
+> The solution was assembled by `solution/build_solution.py` from templates based on solutions exported by Dataverse. If the import reports an error, please open an issue with the error message.
+
+To rebuild the zip after changing the control (only Python 3 is needed, no .NET SDK or Power Platform CLI):
+
+```bash
+npm install
+npm run build -- --buildMode production
+python3 solution/build_solution.py
+```
+
 ### Try it in the test harness
 
 The test harness doesn't support the Web API, so the control has a **Data source** property. Set it to **Demo** to keep the lists in memory:
@@ -94,7 +115,7 @@ npm start
 
 In the test harness, set **dataSource** to **Demo** under *Data Inputs*.
 
-### Use it in a model-driven app
+### Alternative: set it up yourself
 
 1. Create the tables in your environment. The script creates the `examplepublisher` publisher (prefix `sample`), the `listbuildersample` solution and the three tables. You can run it more than once.
 

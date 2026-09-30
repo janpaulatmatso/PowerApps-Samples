@@ -1,0 +1,9 @@
+              <controlDescriptions>
+                <controlDescription forControl="{{UNIQUE_ID}}">
+                  <customControl id="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}">
+                    <parameters>
+                      <datafieldname>{{FIELD}}</datafieldname>
+                    </parameters>
+                  </customControl>
+{{FORM_FACTORS}}                </controlDescription>
+              </controlDescriptions>

@@ -23,6 +23,8 @@ export interface ListDesignerProps {
 	t: Translate;
 	/** The list to edit. A new list is created when undefined. */
 	listId?: string;
+	/** On the form of the list, the form edits the name and description; only the columns are shown. */
+	embedded?: boolean;
 	onSaved: (listId: string) => void;
 	onCancel: () => void;
 }
@@ -37,7 +39,7 @@ let uiKeyCounter = 0;
 const newUiKey = () => `c${++uiKeyCounter}`;
 
 /** Lets the user set the name and description of a list and define its columns and their data types. */
-export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, onSaved, onCancel }) => {
+export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, embedded, onSaved, onCancel }) => {
 	const [list, setList] = React.useState<ListDefinition>({ name: "", description: "" });
 	const [columns, setColumns] = React.useState<DraftColumn[]>();
 	const [hasRows, setHasRows] = React.useState(false);
@@ -82,7 +84,7 @@ export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, 
 		setColumns(copy);
 	};
 
-	const nameError = submitted && !list.name.trim() ? t("Error_Required") : undefined;
+	const nameError = submitted && !embedded && !list.name.trim() ? t("Error_Required") : undefined;
 	const columnError = (column: DraftColumn): string | undefined => {
 		if (!submitted) return undefined;
 		const name = column.name.trim().toLowerCase();
@@ -98,7 +100,7 @@ export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, 
 	const save = () => {
 		setSubmitted(true);
 		const invalid =
-			!list.name.trim() ||
+			(!embedded && !list.name.trim()) ||
 			columns.length === 0 ||
 			columns.some((c) => {
 				const name = c.name.trim().toLowerCase();
@@ -131,7 +133,7 @@ export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, 
 
 		setSaving(true);
 		service
-			.saveList({ ...list, name: list.name.trim() }, result)
+			.saveList({ ...list, name: list.name.trim() }, result, embedded)
 			.then(onSaved)
 			.catch((e) => {
 				setSaving(false);
@@ -141,23 +143,27 @@ export const ListDesigner: React.FC<ListDesignerProps> = ({ service, t, listId, 
 
 	return (
 		<Stack tokens={{ childrenGap: 12 }} styles={{ root: { maxWidth: 900 } }}>
-			<Text variant="xLarge">{listId ? t("EditList") : t("NewList")}</Text>
+			<Text variant="xLarge">{embedded ? t("EditColumnsOnly") : listId ? t("EditList") : t("NewList")}</Text>
 			<ErrorBar message={error} onDismiss={() => setError(undefined)} />
-			<TextField
-				label={t("ListName")}
-				required
-				maxLength={100}
-				value={list.name}
-				errorMessage={nameError}
-				onChange={(_, v) => setList({ ...list, name: v ?? "" })}
-			/>
-			<TextField
-				label={t("ListDescription")}
-				multiline
-				rows={3}
-				value={list.description}
-				onChange={(_, v) => setList({ ...list, description: v ?? "" })}
-			/>
+			{!embedded && (
+				<>
+					<TextField
+						label={t("ListName")}
+						required
+						maxLength={100}
+						value={list.name}
+						errorMessage={nameError}
+						onChange={(_, v) => setList({ ...list, name: v ?? "" })}
+					/>
+					<TextField
+						label={t("ListDescription")}
+						multiline
+						rows={3}
+						value={list.description}
+						onChange={(_, v) => setList({ ...list, description: v ?? "" })}
+					/>
+				</>
+			)}
 
 			<Separator alignContent="start">
 				<Text variant="large">{t("Columns")}</Text>

@@ -6,6 +6,7 @@ import { IListService } from "./services/IListService";
 import { DataverseListService } from "./services/DataverseListService";
 import { InMemoryListService } from "./services/InMemoryListService";
 import { Translate } from "./types";
+import { ContextInfo, getHostMode } from "./utils/hostContext";
 
 initializeIcons(undefined, { disableWarnings: true });
 
@@ -50,9 +51,14 @@ export class ListBuilder implements ComponentFramework.ReactControl<IInputs, IOu
 				dataSource === "Demo" ? new InMemoryListService() : new DataverseListService(context.webAPI);
 		}
 
+		// On the form of a list the control shows that list, elsewhere the overview of all lists.
+		const contextInfo = (context.mode as unknown as { contextInfo?: ContextInfo }).contextInfo;
+		const hostMode = getHostMode(contextInfo);
+
 		return React.createElement(App, {
-			// Remount the app when the data source changes, so it reloads its data.
-			key: dataSource,
+			// Remount the app when the data source or the host record changes, so it reloads its data.
+			key: `${dataSource}|${hostMode.kind === "embedded" ? hostMode.listId : hostMode.kind}`,
+			hostMode,
 			service: this.service,
 			t: this.translate,
 			locale: LOCALES[context.userSettings.languageId] ?? "en-US",

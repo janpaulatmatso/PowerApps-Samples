@@ -24,7 +24,8 @@ export interface ListDataProps {
 	t: Translate;
 	locale: string;
 	listId: string;
-	onBack: () => void;
+	/** Returns to the overview of lists. Undefined when the control is embedded on the form of the list. */
+	onBack?: () => void;
 	onEditColumns: () => void;
 }
 
@@ -99,13 +100,15 @@ export const ListData: React.FC<ListDataProps> = ({ service, t, locale, listId, 
 	};
 
 	if (!list) {
-		return error ? <ErrorBar message={error} onDismiss={onBack} /> : <Loading t={t} />;
+		return error ? <ErrorBar message={error} onDismiss={() => setError(undefined)} /> : <Loading t={t} />;
 	}
 
-	const commands: ICommandBarItemProps[] = [
-		{ key: "back", text: t("BackToLists"), iconProps: { iconName: "Back" }, onClick: onBack },
-		{ key: "columns", text: t("EditColumns"), iconProps: { iconName: "ColumnOptions" }, onClick: onEditColumns },
-	];
+	const commands: ICommandBarItemProps[] = onBack
+		? [
+				{ key: "back", text: t("BackToLists"), iconProps: { iconName: "Back" }, onClick: onBack },
+				{ key: "columns", text: t("EditColumns"), iconProps: { iconName: "ColumnOptions" }, onClick: onEditColumns },
+			]
+		: [{ key: "columns", text: t("EditColumnsOnly"), iconProps: { iconName: "ColumnOptions" }, onClick: onEditColumns }];
 
 	const rowCommands: ICommandBarItemProps[] = [
 		{
@@ -146,8 +149,9 @@ export const ListData: React.FC<ListDataProps> = ({ service, t, locale, listId, 
 	return (
 		<Stack tokens={{ childrenGap: 8 }}>
 			<CommandBar items={commands} />
-			<Text variant="xLarge">{list.name}</Text>
-			{list.description && <Text styles={{ root: { whiteSpace: "pre-wrap" } }}>{list.description}</Text>}
+			{/* On the form of the list, the form already shows the name and description. */}
+			{onBack && <Text variant="xLarge">{list.name}</Text>}
+			{onBack && list.description && <Text styles={{ root: { whiteSpace: "pre-wrap" } }}>{list.description}</Text>}
 			<ErrorBar message={error} onDismiss={() => setError(undefined)} />
 
 			<Pivot selectedKey={tab} onLinkClick={(item) => item && setTab(item.props.itemKey as Tab)}>

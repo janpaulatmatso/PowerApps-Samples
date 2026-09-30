@@ -369,4 +369,10 @@
   <data name="Yes" xml:space="preserve">
     <value>Ja</value>
   </data>
+  <data name="SaveListFirst" xml:space="preserve">
+    <value>Sla de lijst eerst op. Daarna kun je hier kolommen en gegevens toevoegen.</value>
+  </data>
+  <data name="EditColumnsOnly" xml:space="preserve">
+    <value>Kolommen bewerken</value>
+  </data>
 </root>

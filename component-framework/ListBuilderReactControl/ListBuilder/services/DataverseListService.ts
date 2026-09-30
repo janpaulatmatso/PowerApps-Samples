@@ -33,7 +33,7 @@ export class DataverseListService implements IListService {
 		return toList(entity);
 	}
 
-	public async saveList(list: ListDefinition, columns: ListColumn[]): Promise<string> {
+	public async saveList(list: ListDefinition, columns: ListColumn[], columnsOnly = false): Promise<string> {
 		const data: ComponentFramework.WebApi.Entity = {
 			sample_name: list.name,
 			sample_omschrijving: list.description,
@@ -42,7 +42,9 @@ export class DataverseListService implements IListService {
 		let listId: string;
 		if (list.id) {
 			listId = checkId(list.id);
-			await this.webAPI.updateRecord(LIST_TABLE, listId, data);
+			if (!columnsOnly) {
+				await this.webAPI.updateRecord(LIST_TABLE, listId, data);
+			}
 		} else {
 			listId = (await this.webAPI.createRecord(LIST_TABLE, data)).id;
 		}

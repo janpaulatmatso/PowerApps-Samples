@@ -31,10 +31,12 @@ export class InMemoryListService implements IListService {
 		return list ? this.result({ ...list }) : Promise.reject(new Error(`List ${listId} not found`));
 	}
 
-	public saveList(list: ListDefinition, columns: ListColumn[]): Promise<string> {
+	public saveList(list: ListDefinition, columns: ListColumn[], columnsOnly = false): Promise<string> {
 		let listId = list.id;
 		if (listId) {
-			this.lists = this.lists.map((l) => (l.id === listId ? { ...list } : l));
+			if (!columnsOnly) {
+				this.lists = this.lists.map((l) => (l.id === listId ? { ...list } : l));
+			}
 		} else {
 			listId = this.newId();
 			this.lists.push({ ...list, id: listId });

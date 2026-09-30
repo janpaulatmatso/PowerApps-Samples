@@ -1,0 +1,6 @@
+                  <customControl formFactor="{{FORM_FACTOR}}" name="{{CONTROL_NAME}}">
+                    <parameters>
+                      <anchor>{{FIELD}}</anchor>
+                      <dataSource type="Enum" static="true">Dataverse</dataSource>
+                    </parameters>
+                  </customControl>
